@@ -158,3 +158,24 @@
     z-index: 3;
     pointer-events: none;
 }
+
+@media only screen and (max-width: 600px) {
+  .hero {
+    flex-direction: column;
+    padding: 40px 20px;
+    height: auto;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}

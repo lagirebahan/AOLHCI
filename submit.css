@@ -1,0 +1,6 @@
+body{
+    overflow-x: hidden;
+    background: linear-gradient(90deg, #2c3e50, #4b3869, #1e3c72, #2f4f4f, #3c3b3f);
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}

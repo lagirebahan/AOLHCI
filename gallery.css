@@ -1,16 +1,8 @@
 body{
     overflow-x: hidden;
-    /* background-color: #FFF3C4; */
-    /* background-color: #D8ECF3; */
-    /* background-color: #D0F0C0; */
-    /* background-color: #EADCF8; */
-    /* background-color: #F0FFF0; */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), 
-    url(assets/Untitled\ design\ \(1\).png);
-    
-    background-repeat: repeat-y;
-    background-size: auto;
-    background-position: top center;
+    background: linear-gradient(135deg, #2c3e50, #4b3869, #1e3c72, #2f4f4f, #3c3b3f);
+    background-size: 100% 100%;
+    background-attachment: fixed;
 }
 
 .trendingcontainer{
@@ -55,4 +47,20 @@ body{
     scroll-margin-top: 40vh;
 }
 
+/* .text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+    
+}
 
+.text a {
+    margin-left: auto;
+    color: white;
+}
+
+.text h1 {
+    color: white;
+} */

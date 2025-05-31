@@ -13,7 +13,7 @@ document.getElementById('details').style.transition= 'background-color 0.2s ease
 
 document.getElementById('details').addEventListener("mouseenter", function(){
     this.style.backgroundColor = 'rgba(255, 255, 255, 0.9)';
-    this.style.transform = 'scale(0.85)';
+    this.style.transform = 'scale(1.1)';
 });
 
 document.getElementById('details').addEventListener("mouseleave", function(){
@@ -28,6 +28,10 @@ const buttons = document.querySelectorAll('.slider-nav a.slide-button');
 const leftbutton = document.querySelector('.left-slide');
 const rightbutton = document.querySelector('.right-slide');
 
+const artistName = ['artist1','artist2','artist3'];
+const artistNameElement = document.getElementById('artistname');
+
+
 let current = 0;
 const slidetimer = 5000;
 const slidewidth = slides[0].clientWidth;
@@ -40,6 +44,7 @@ function gotoslide(index){
     });
 
     updateActive(index);
+    updateArtistName(index);
 }
 
 leftbutton.addEventListener("click", function(event){
@@ -64,6 +69,10 @@ function updateActive(index) {
     buttons.forEach((btn, i) => {
         btn.classList.toggle('active', i===index);
     });
+}
+
+function updateArtistName(index) {
+    artistNameElement.textContent = artistName[index];
 }
 
 function starttimer(){
@@ -93,7 +102,8 @@ const hearticon = document.querySelectorAll(".hearticon");
 hearticon.forEach(x => {
     let liked = false;
 
-    x.addEventListener("click", () => {
+    x.addEventListener("click", (event) => {
+        event.stopPropagation();
         liked = !liked;
         if(liked){
             x.src="assets/heart (1).png";

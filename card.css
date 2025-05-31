@@ -9,20 +9,30 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.05);
     overflow: hidden;
     transition: all 0.3s ease;
+
+    cursor: pointer;
+
+    height: auto;
 }
 
 .artcard:hover{
+    height: auto;
     transform: translateY(-4px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15), 0 12px 24px rgba(0, 0, 0, 0.08);
 }
 
 .artimage {
     background-color: lightgrey;
-    height: 140px;
+    height: 200px;
     width: 100%;
     display: flex;
     justify-content: center;
     overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.artcard:hover .artimage{
+    height: 250px;
 }
 
 .artimage img{
@@ -38,18 +48,21 @@
 }
 
 .artname {
+    font-family: Roboto, verdana, arial;
+    color: black;
     font-weight: bold;
     margin: 0;
 }
 
 .artist{
+    font-family: Roboto, verdana, arial;
     color:#777;
     margin: 2px 0;
 }
 
 .like img {
     display: block;
-    height: 15px;
+    height: 20px;
     width: auto;
     cursor: pointer;
     transition: 0.1s ease;
@@ -57,4 +70,41 @@
 
 .like img:hover {
     transform: scale(1.05);
+}
+
+.popupoverlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 100000;
+
+}
+
+.popupcontent{
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 80%;
+    text-align: center;
+    position: relative;
+}
+
+.popupcontent img{
+    max-height: 70vh;
+    max-width: 100%;
+}
+
+.close-btn{
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+
 }

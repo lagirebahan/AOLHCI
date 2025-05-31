@@ -129,14 +129,74 @@
     position: absolute;
     z-index: 5;
     text-align: center;
+
+    background: rgba(128, 128, 128, 0.5);
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
 }
 
 .herocontent h1{
-    color: white;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 40px;
+    color: #FFDD95;
 }
 
 .herocontent h2{
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight:400;
+    font-style: normal;
+    font-size: 40px;
     color: white;
+}
+
+.herocontent h2 span{
+    font-family: 'Playfair Display', sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 30px;
+    color: white;
+}
+
+.herocontent h3{
+    font-family: 'Playfair Display', sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 30px;
+    color: white;
+}
+
+.herocontent h3 span{
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 50px;
+    color: white;
+}
+
+.herocontent h4{
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+}
+
+.herocontent h4 span{
+    /* width: auto;
+    height: auto;
+    padding: 4px 8px;
+    background-color: white;
+    border-radius: 20px; */
+    font-size: 20px;
+    color: #FFDD95;
+}
+
+.herocontent span{
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .herocontent button{
@@ -145,7 +205,12 @@
     border-radius: 50px 50px 50px 50px;
     border: none;   
     
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight:400;
+    font-style: normal;
+    font-size: 20px;
     background-color: white;
+    cursor: pointer;
 }
 
 .pengelapdunia{
@@ -159,10 +224,10 @@
     pointer-events: none;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   .hero {
     flex-direction: column;
-    padding: 40px 20px;
+    padding: 0;
     height: auto;
   }
 

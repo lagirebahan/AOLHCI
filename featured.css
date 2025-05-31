@@ -12,13 +12,21 @@
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 20px;
-    padding:30px;
+    padding:30px 60px 10px 30px;
 }
 
 .trending-tags{
     display: flex ;
     flex-direction: column;
     flex-grow: 1;
+}
+
+.trending-tags h1{
+    font-family: 'Bebas Neue', sans-serif;
+    font-style: normal;
+    font-size: 50px;
+    font-weight:400;
+    color: #FFDD95;
 }
 
 .trending {
@@ -31,9 +39,15 @@
     
 }
 
-.trending li a {
+.trending a {
     text-decoration: none;
     background-color: white;
+
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-size: 14px;
+    font-weight:400;
+    color: black;
 
     width: auto;
     height: auto;
@@ -42,6 +56,12 @@
     border-radius: 20px;
     
     cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.05);
+    transition: all 150ms ease;
+}
+
+.trending  a:hover {
+    transform: scale(1.1);
 }
 
 .searchbar{
@@ -86,19 +106,45 @@
     align-items: flex-start;
 }
 
-.featured-artworks{
+.featured-artwork{
     flex: 1;
     max-width: 1000px;
+    background-color: #5a5a5a;
+    padding: 30px;
+    padding-bottom: 50px;
+    border-radius: 10px;
+}
+.featured-artwork h1{
+    font-family: 'Bebas Neue', sans-serif;
+    font-style: normal;
+    font-size: 50px;
+    font-weight:400;
+    color: #FFDD95;
+}
+
+.featured-header{
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+.see-more{
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 24px;
+    color: #FFDD95;
+    text-decoration: underline;
+    transition: color 0.3 ease;
+    align-self: flex-end;
+
+}
+.see-more:hover{
+    color: white;
 }
 .artflex{
     display: grid;
-    /* justify-content: space-between; */
-    flex-wrap: wrap;
+ 
     grid-template-columns: repeat(3, 1fr);
-    /* justify-content: center; */
     gap: 20px;
     width: 100%;
     margin-top: 10px;
@@ -113,49 +159,70 @@
     cursor: pointer;
 }
 
-.existingtags {
-    width: 300px;
+.rightside {
+    width: 350px;
     flex-shrink: 0;
-    background: lightgray;
-    padding: 20px;
-    border-radius: 10px;
+    
+    
+}
+
+.rightside h1{
+    width: 350px;
+    flex-shrink: 0;
+    
+    font-family: 'Bebas Neue', sans-serif;
+    font-style: normal;
+    font-size: 50px;
+    font-weight:400;
+    color: #FFDD95;
+    text-align: center;
 }
 
 .tagflex{
     display: grid;
     /* justify-content: space-between; */
-    flex-wrap: wrap;
+    background: #5a5a5a;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.1);
     grid-template-columns: repeat(3, 1fr);
-    /* justify-content: center; */
-    gap: 5px;
+    gap: 20px;
     width: 100%;
     margin-top: 10px;
 }
 
 .tagflex a {
-    background: gray;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    background: #5a5a5a;
     border-radius: 10px;
     padding:10px 10px;
     font-size: 16px;
     text-align: center;
     text-decoration: none;
-    transition: transform 250ms ease;
+    transition: all 100ms ease;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-size: 16px;
+    font-weight:600;
 }
 
 .tagflex a:hover {
-    background: #e4e4e4;
-    transform: scale(1.1);
+    background: gray;
+    transform: scale(1.05);
 }
 
 @media only screen and (max-width:600px){
     .layer2 {
         flex-direction: column;
     }
-    .existingtags {
+    .rightside {
         width: 100%;
         margin-top: 20px;
     }
-    .featured-artworks{
+    .featured-artwork{
         width: 100%;
     }
 }

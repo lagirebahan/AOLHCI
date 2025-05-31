@@ -47,6 +47,14 @@ body{
     scroll-margin-top: 40vh;
 }
 
+body h1{
+    font-family: 'Bebas Neue', sans-serif;
+    font-style: normal;
+    font-size: 50px;
+    font-weight:400;
+    color: #FFDD95;
+}
+
 /* .text {
     display: flex;
     justify-content: space-between;

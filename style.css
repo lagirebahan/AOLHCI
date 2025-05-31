@@ -15,17 +15,17 @@ header{
 nav {
     display: flex;
     align-items: center;
-    height: 50px;
+    height: 55px;
     width: 100%;
     
     
     /* justify-content: flex-end; */
 
     /* background-color: #f0e6da; */
-    background-color: gray;
+    background: linear-gradient(135deg, gray, #a0a0a0, #909090, #888888);
     /* background-image: url(assets/Untitled\ design\ \(1\).png); */
-    background-size: cover;
-    background-position: bottom;
+    /* background-size: cover;
+    background-position: bottom; */
 
     position: fixed;
     z-index: 10000;
@@ -46,7 +46,7 @@ nav {
     min-width: 5rem;
     height: 35px;
     border-radius: 10px 0px 10px 0px;
-    background-color: #d4a373;
+    background-color: rgba(255, 255, 255, 0.3);
     opacity: 1;
     transition: all ease 250ms;
     cursor: pointer;
@@ -54,9 +54,16 @@ nav {
     align-items: center;
     justify-content: center;
     padding: 0 15px;
+
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    color: white;
 }
 
 .linkclass a:hover{
+    background-color: rgba(255, 255, 255, 0.7);
     opacity: 1;
     transform: scale(1.1);
     transition: 0.2s ease;
@@ -105,41 +112,7 @@ button img {
 
 
 
-/* @media (max-width: 768px) {
-  nav {
-    flex-wrap: wrap;
-    height: auto;
-    padding: 10px;
-    justify-content: space-between;
-  }
 
-  .linkclass {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background-color: #f0e6da;
-    padding: 10px 0;
-  }
-
-  .linkclass.show {
-    display: flex;
-  }
-
-  .linkclass a h3 {
-    font-size: 16px;
-    padding: 10px;
-    text-align: center;
-  }
-
-  #menu-toggle {
-    display: block;
-    background: none;
-    border: none;
-    font-size: 24px;
-    margin-right: 20px;
-    cursor: pointer;
-  }
-} */
 
 .footer{
     padding-top: 50px;
@@ -154,7 +127,7 @@ button img {
     
     /* justify-content: flex-end; */
 
-    background: linear-gradient(270deg, black, #0a0a0a, #1a1a1a, #2b2b2b);
+    background: linear-gradient(135deg, black, #0a0a0a, #1a1a1a, #2b2b2b);
     background-attachment: fixed;
 
     /* background-image: url(assets/Untitled\ design\ \(1\).png); */
@@ -164,3 +137,29 @@ button img {
     position: absolute;
     z-index: 10000;
 }
+
+@media only screen and (max-width: 768px) {
+  nav {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 10px;
+    justify-content: space-between;
+  }
+
+  .linkclass {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #f0e6da;
+    padding: 10px 0;
+  }
+  .linkclass a h3 {
+    font-size: 16px;
+    padding: 10px;
+    text-align: center;
+  }
+
+  
+}
+
+

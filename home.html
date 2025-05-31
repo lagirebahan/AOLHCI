@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Picverse | Home </title>
+    <link rel="stylesheet" href="textfont.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="hero.css">
-    <link rel="stylesheet" href="textfont.css">
     <link rel="stylesheet" href="featured.css">
     <link rel="stylesheet" href="card.css">
     <link rel="stylesheet" href="home.css">
@@ -17,7 +17,7 @@
             <div class="logoclass">
                 <!-- <button id="menu-toggle">&#9776;</button> make hamburger icon-->
                  <a href="home.html" id="logoid">
-                    <img src="assets/download.png" alt="Picverse" width="50" height="50">
+                    <img src="assets/officialpicverse.png" alt="Picverse" width="50" height="50">
                  </a>
             </div>
             
@@ -51,12 +51,13 @@
 
         <div class="herocontent">
             <center>
-                <h2>Dive Into the World of</h2><br>
-                <h1>Creativity<h1><br>
+                <h2>Dive <span> right </span> Into</h2>
+                <h3>the <span>World</span> of           </h3>
+                <h1>CREATIVITY<h1>
                 <button id="details">&lt&lt Explore &gt&gt</button>
                 <br>
                 <br>
-                <h3>Background Art by : </h3>
+                <h4>Background Art by :   <span id="artistname"> Artist </span> </h4>
             </center>
         </div>
 
@@ -70,18 +71,18 @@
         <div class="layer1">
             <div class="trending-tags">
                 <h1>Trending Tags</h1>
-                    <ul class="trending">
-                        <li><a href="gallery.html#portrait">Portrait</a></li>
-                        <li><a href="gallery.html#anime">Anime</a></li>
-                        <li><a href="gallery.html#fantasy">Fantasy</a></li>
-                        <li><a href="gallery.html#pencil">Pencil</a></li>
-                        <li><a href="gallery.html#digital">Digital Art</a></li>
-                        <li><a href="gallery.html#cyberpunk">Cyberpunk</a></li>
-                    </ul>
+                    <div class="trending">
+                        <a href="gallery.html#portrait">Portrait</a>
+                        <a href="gallery.html#anime">Anime</a>
+                        <a href="gallery.html#fantasy">Fantasy</a>
+                        <a href="gallery.html#pencil">Pencil</a>
+                        <a href="gallery.html#digital">Digital Art</a>
+                        <a href="gallery.html#cyberpunk">Cyberpunk</a>
+                    </div>
             </div>
 
             <div class="searchbar">
-                <input type="text" class="searchInput" placeholder="search">
+                <input type="text" class="searchInput" placeholder="Search for artists/artworks">
                 <button class="searchButton"><img src="assets/search.png" alt=""></button>
             </div>
         </div>
@@ -90,14 +91,17 @@
         
         <div class="layer2">
             <div class="featured-artwork">
-                <h1>Featured Artworks</h1>
+                <div class="featured-header">
+                    <h1>Featured Artworks</h1>
+                    <a href="gallery.html" class="see-more">See more &gt;&gt;</a>
+                </div>
                 <br>
                 <div class="artflex">
                     <div class="artcard">
                         <div class="artimage"><img src="assets/tung-tung-tung-sahur-1747556866558_43.jpeg" alt=""></div>
                         <div class="artinfo">
-                            <p class="artname">art name</p>
-                            <p class="artist">artist</p>
+                            <p class="artname">the Tung demon</p>
+                            <p class="artist">the memelord</p>
                             <div class="like"><img src="assets/heart.png" alt="Like" class="hearticon"></div>
                         </div>
                     </div>
@@ -141,7 +145,7 @@
                             <div class="like"><img src="assets/heart.png" alt="Like" class="hearticon"></div>
                         </div>
                     </div>
-                    <div class="artcard">
+                    <!-- <div class="artcard">
                         <div class="artimage"></div>
                         <div class="artinfo">
                             <p class="artname">art name</p>
@@ -164,13 +168,14 @@
                             <p class="artist">artist</p>
                             <div class="like"><img src="assets/heart.png" alt="Like" class="hearticon"></div>
                         </div>
-                    </div>
+                    </div> -->
                     <!-- <button class="galleryredirect">Discover More!</button> -->
                 </div>
 
             </div>
 
-            <div class="existingtags">
+            <div class="rightside">
+                <h1>Tags</h1>
                 <div class="tagflex">
                     <a href="gallery.html#abstract">Abstract</a>
                     <a href="gallery.html#anime">Anime</a>
@@ -179,7 +184,7 @@
                     <a href="gallery.html#digital">Digital</a>
                     <a href="gallery.html#fantasy">Fantasy</a>
                     <a href="gallery.html#landscape">Landscape</a>
-                    <a href="gallery.html#oil">Oil</a>
+                    <a href="gallery.html#oil">Oil Painting</a>
                     <a href="gallery.html#pencil">Pencil</a>
                     <a href="gallery.html#pixel">Pixel Art</a>
                     <a href="gallery.html#portrait">Portrait</a>
@@ -214,5 +219,20 @@
     <script src="home.js" defer></script>
     <!-- <script src="card.js"></script> -->
 
+    <div class="popupoverlay" id="popupOverlay">
+        <div class="popupcontent">
+            <span class="close-btn">&times;</span>
+            <div class="popupleft">
+                <img id="popupimg" src="" alt="popupimg">
+            </div>
+            
+            <div class="popupright">
+                <h3 id="popupname">art name</h3>
+                <p id="popupartist">artist</p>
+            </div>
+            
+        </div>
+    </div>
+    <script src="card.js" defer></script>
 </body>
 </html>

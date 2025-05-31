@@ -1,0 +1,13 @@
+@font-face{
+    src: url(fonts/Roboto-VariableFont_wdth\,wght.ttf);
+    font-family: Roboto;
+}
+
+@font-face{
+    src: url(fonts/OpenSans-VariableFont_wdth\,wght.ttf);
+    font-family: OpenSans;
+}
+
+h1, h2, h3, h4, h5{
+    font-family: Roboto, verdana, arial;
+}

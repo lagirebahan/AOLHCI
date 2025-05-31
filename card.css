@@ -1,0 +1,60 @@
+.artcard {
+    display: flex;
+    width: 225px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: white;
+    flex-direction: column;
+
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.artcard:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15), 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+
+.artimage {
+    background-color: lightgrey;
+    height: 140px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.artimage img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.artinfo {
+    padding: 10px;
+    font-size: 14px;
+    text-align: left;
+}
+
+.artname {
+    font-weight: bold;
+    margin: 0;
+}
+
+.artist{
+    color:#777;
+    margin: 2px 0;
+}
+
+.like img {
+    display: block;
+    height: 15px;
+    width: auto;
+    cursor: pointer;
+    transition: 0.1s ease;
+}
+
+.like img:hover {
+    transform: scale(1.05);
+}

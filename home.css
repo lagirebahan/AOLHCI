@@ -1,0 +1,21 @@
+body{
+    /* overflow-x: hidden;
+    background-color: #FFF3C4; 
+    background-color: #D8ECF3; 
+    background-color: #D0F0C0; 
+    background-color: #EADCF8; 
+    background-color: #F0FFF0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), 
+    url(assets/Untitled\ design\ \(1\).png);
+    
+    background-repeat: repeat-y;
+    background-size: auto;
+    background-position: top center; */
+
+    
+    overflow-x: hidden;
+    background: linear-gradient(135deg, #2c3e50, #4b3869, #1e3c72, #2f4f4f, #3c3b3f);
+    background-size: 400% 400%;
+    animation: gradientMove 8s ease infinite;
+
+}

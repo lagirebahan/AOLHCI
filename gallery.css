@@ -1,0 +1,58 @@
+body{
+    overflow-x: hidden;
+    /* background-color: #FFF3C4; */
+    /* background-color: #D8ECF3; */
+    /* background-color: #D0F0C0; */
+    /* background-color: #EADCF8; */
+    /* background-color: #F0FFF0; */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), 
+    url(assets/Untitled\ design\ \(1\).png);
+    
+    background-repeat: repeat-y;
+    background-size: auto;
+    background-position: top center;
+}
+
+.trendingcontainer{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 30px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+.trending {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 20px;
+}
+
+.normalcontainer{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 30px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+.normal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 20px;
+}
+.tag {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    width: 100%;
+    margin-top: 10px;
+    scroll-margin-top: 40vh;
+}
+
+

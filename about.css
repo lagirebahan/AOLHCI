@@ -5,9 +5,9 @@ body{
     background-color: #D0F0C0; 
     background-color: #EADCF8; 
     background-color: #F0FFF0; */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-    url(assets/Untitled\ design\ \(1\).png);
-    
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+    url(assets/Untitled\ design\ \(1\).png); */
+    background: linear-gradient(90deg, #2c3e50, #4b3869, #1e3c72, #2f4f4f, #3c3b3f);
     background-repeat: repeat-y;
     background-size: auto;
     background-position: top center;

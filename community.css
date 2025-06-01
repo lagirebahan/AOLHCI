@@ -3,4 +3,115 @@ body{
     background: linear-gradient(90deg, #2c3e50, #4b3869, #1e3c72, #2f4f4f, #3c3b3f);
     background-size: 100% 100%;
     background-attachment: fixed;
+   
 }
+
+.forum{
+    max-width: 800px;
+    margin: 2rem auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.forum h1{
+    margin-top: 0;
+}
+
+.createnewpost{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+.createnewpost input{
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.createnewpost textarea{
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    resize:none;
+    height:100px;
+}
+.createnewpost button{
+    width: fit-content;
+    padding: 0.5rem 1rem;
+    background-color: #4b3869;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.replies{
+    margin-top: 0.75rem;
+    padding-left: 1rem;
+    border-left: 2px solid #ccc;
+    font-size: 0.9rem;
+    color: #444;
+    display: none;
+}
+
+.forumcontent{
+    margin-top: 1.5rem;
+}
+
+.posts{
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: #fafafa;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.posts:hover{
+    background-color: #f0f0f0;
+}
+.title{
+    margin: 0;
+    font-size: 1.2rem;
+    color:#333;
+}
+
+.postinfo{
+    margin-top: 0.5rem;
+    color: #777;
+    font-size:0.9rem;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.author {
+    display: flex;
+    align-items:center;
+    gap: 0.5rem;
+}
+.author img{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.recent{
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-top: 2px solid #ddd;
+    border-radius: 8px;
+}
+
+.recent h3{
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    color: #333;
+}
+

@@ -98,13 +98,33 @@
 .popupcontent img{
     max-height: 70vh;
     max-width: 100%;
+    padding: 20px;
 }
 
 .close-btn{
     position: absolute;
-    top: 10px;
+    display: flex;
+    top:10px;
     right: 15px;
-    font-size: 24px;
+    
     cursor: pointer;
 
+    width: 2rem;
+    height: 2rem;
+    
+    /* border-radius: 50%;
+    background-color: gray;
+    text-align: center;
+    align-items: center; */
+    /* align-items: center;
+    justify-content: center;
+
+     z-index: 100001; */
 }
+
+/* .close-btn img {
+    width: 2rem;
+    height: 2rem;
+    object-fit: contain;
+    background-color: yellow;
+} */

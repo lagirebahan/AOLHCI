@@ -4,3 +4,47 @@ body{
     background-size: 100% 100%;
     background-attachment: fixed;
 }
+
+.submission{
+    max-width: 800px;
+    margin: 2rem auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.submission h1{
+    margin-top: 0;
+}
+
+.submitwork{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+.submitwork input{
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.submitwork textarea{
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    resize:none;
+    height:100px;
+}
+.submitwork button{
+    width: fit-content;
+    padding: 0.5rem 1rem;
+    background-color: #4b3869;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

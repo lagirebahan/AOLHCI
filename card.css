@@ -60,6 +60,13 @@
     margin: 2px 0;
 }
 
+.like{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 5px;
+}
+
 .like img {
     display: block;
     height: 20px;
@@ -70,6 +77,14 @@
 
 .like img:hover {
     transform: scale(1.05);
+}
+
+.likecount{
+    font-size: 14px;
+    color: #333;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .popupoverlay{
@@ -111,15 +126,35 @@
 
     width: 2rem;
     height: 2rem;
-    
-    /* border-radius: 50%;
-    background-color: gray;
-    text-align: center;
-    align-items: center; */
-    /* align-items: center;
-    justify-content: center;
+}
 
-     z-index: 100001; */
+.popupheart{
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 10px;
+
+}
+
+.popupheart img {
+    display: block;
+    height: 20px;
+    width: auto;
+    cursor: pointer;
+    transition: 0.1s ease;
+    z-index: 100001;
+}
+
+.popupheart img:hover {
+    transform: scale(1.05);
+}
+
+.popuplikecount{
+    font-size: 16px;
+    color: #333;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 /* .close-btn img {

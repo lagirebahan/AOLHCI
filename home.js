@@ -97,23 +97,7 @@ gotoslide(0);
 updateActive(0);
 starttimer();
 
-const hearticon = document.querySelectorAll(".hearticon");
 
-hearticon.forEach(x => {
-    let liked = false;
-
-    x.addEventListener("click", (event) => {
-        event.stopPropagation();
-        liked = !liked;
-        if(liked){
-            x.src="assets/heart (1).png";
-        } else {
-            x.src="assets/heart.png";
-        }
-
-    });
-
-});
 
 
 

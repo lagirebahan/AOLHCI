@@ -5,14 +5,37 @@ const popuptitle= document.getElementById('popupname');
 const popupartist= document.getElementById('popupartist');
 const closebtn= document.querySelector('.close-btn');
 
+const popupheart= document.querySelector('.popuphearticon');
+const popupcount=document.querySelector('.popuplikecount');
+
 artcards.forEach(card =>{
     card.addEventListener('click', function(){
-        const imgsrc = this.querySelector('.artimage img').src;
-        const title = this.querySelector('.artname').textContent;
-        const artist = this.querySelector('.artist').textContent;
+        
+
+        const imgsrc = card.querySelector('.artimage img').src;
+        const title = card.querySelector('.artname').textContent;
+        const artist = card.querySelector('.artist').textContent;
+
+        const cardlike= card.querySelector('.hearticon');
+        const cardcount= card.querySelector('.likecount');
+
+        const liked = cardlike.src.includes("heart (1).png");
+        
         popupimg.src=imgsrc;
         popuptitle.textContent= title;
         popupartist.textContent=artist;
+
+        popupheart.src = liked ? "assets/heart (1).png" : "assets/heart.png";
+
+        // if(liked){
+        //     popupheart.src = "assets/heart (1).png";
+        // } else {
+        //     popupheart.src= "assets/heart.png";
+        // }
+
+        popupcount.textContent = cardcount.textContent;
+
+
         popupOverlay.style.display='flex';
 
     });
@@ -27,3 +50,49 @@ popupOverlay.addEventListener('click', function(e){
         popupOverlay.style.display = 'none';
     }
 });
+
+// popupheart.addEventListener("click", (event) =>{
+//     event.stopPropagation();
+//     if(!current) return;
+
+//     const cardlike= current.querySelector('.hearticon');
+//     const cardcount= current.querySelector('.likecount');
+//     let count = parseInt(cardcount.textContent,10)||0;
+//     let liked=popupheart.src.includes("heart (1).png");
+
+//     if(liked){
+//         popupheart.src = "assets/heart.png";
+//         cardlike.src = "assets/heart.png";
+//         count--;
+//     } else {
+//         popupheart.src = "assets/heart (1).png";
+//         cardlike.src = "assets/heart (1).png";
+//         count++;
+//     }
+//     popupcount.textContent=count;
+//     cardcount.textContent=count;
+// });
+
+const hearticon = document.querySelectorAll(".hearticon");
+
+hearticon.forEach(x => {
+    let liked = false;
+
+    const likecount = x.parentElement.querySelector(".likecount");
+    let count = parseInt(likecount.textContent,10)||0;
+
+    x.addEventListener("click", (event) => {
+        event.stopPropagation();
+        liked = !liked;
+        if(liked){
+            x.src="assets/heart (1).png";
+            count++;
+        } else {
+            x.src="assets/heart.png";
+            count--;
+        }
+        likecount.textContent = count;
+    });
+
+});
+

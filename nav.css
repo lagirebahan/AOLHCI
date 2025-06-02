@@ -1,0 +1,165 @@
+header{
+    padding-bottom: 50px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    height: 55px;
+    width: 100%;
+    background: linear-gradient(135deg, gray, #888888, #909090, #a0a0a0);
+
+    position: fixed;
+    z-index: 10000;
+
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.05);
+}
+
+.linkclass {
+    gap: 20px;
+    padding: 20px 80px;
+    align-items: center;
+    display: flex;
+    margin-left: auto;
+}
+
+.linkclass a{
+    text-decoration: none;
+    min-width: 5rem;
+    height: 35px;
+    border-radius: 10px 0px 10px 0px;
+    background-color: rgba(255, 255, 255, 0.3);
+    opacity: 1;
+    transition: all ease 250ms;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 15px;
+
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    color: white;
+}
+
+.linkclass a:hover{
+    background-color: rgba(255, 255, 255, 0.7);
+    opacity: 1;
+    transform: scale(1.1);
+    transition: 0.2s ease;
+}
+
+.linkclass a.active{
+    opacity: 1;
+    transform: scale(1.1);
+    background-color: white;
+}
+
+.linkclass h3{
+    color: black;
+}
+
+#logoid {
+    margin-left: 20px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    border: none;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+#logoid img {
+    height:50px;
+    width:auto;
+}
+
+#logoid:hover{
+    opacity: 0.7;
+}
+
+
+
+
+
+.footer{
+    padding-top: 50px;
+}
+
+.navbawah {
+    display: flex;
+    align-items: center;
+    height: 200px;
+    width: 100%;
+    
+    
+    /* justify-content: flex-end; */
+
+    background: linear-gradient(135deg, black, #0a0a0a, #1a1a1a, #2b2b2b);
+    background-attachment: fixed;
+
+    /* background-image: url(assets/Untitled\ design\ \(1\).png); */
+    background-size: cover;
+    background-position: bottom;
+
+    position: absolute;
+    z-index: 10000;
+}
+
+#hamburger{
+    display: none;
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+    margin-left: auto;
+    padding: 10px;
+    z-index: 9999999;
+}
+
+@media only screen and (max-width: 768px) {
+  nav {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 10px;
+    height: auto;
+  }
+  #hamburger{
+    display: block;
+  }
+
+  .linkclass {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: darkgray;
+    position: absolute;
+    top: 55px;
+    left: 0;
+    z-index: 9999;
+    gap: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+  .linkclass a {
+    justify-content: flex-start;
+    width: 100%;
+    padding: 10px;
+  }
+  .linkclass.show{
+    display: flex;
+  }
+  .linkclass a h3{
+    color: white;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight:400;
+    font-size: 18px;
+    margin: 0;
+  }
+}
+
+

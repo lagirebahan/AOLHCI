@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="textfont.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="community.css">
+    <link rel="stylesheet" href="nav.css">
+
 </head>
 <body>
     <header>
@@ -18,90 +20,183 @@
                  </a>
             </div>
             
+            <button id="hamburger">&#9776;</button>
 
-            <div class="linkclass">
+            <div class="linkclass" id="navlink">
                 <a href="about.html"><h3>About Us</h3></a>
                 <a href="gallery.html"><h3>Gallery</h3></a>
                 <a href="community.html"><h3>Community</h3></a>
                 <a href="submit.html"><h3>Submit</h3></a>
-                <!-- <button id="search" ><img src="assets/search.png" alt="search"></button> -->
             </div>
         </nav>
     </header>
 
-    <div class="forum">
-        <div class="toplayer">
-            <center>
-                <h1>Community Forum</h1>
-                <h2>Description</h2>  
-            </center>
-            
-        </div>
+    <div class="toplayer">
+        <center>
+            <h1>Community Page</h1>
+        </center>
+                
+    </div>
 
-        <div class="botlayer">
+    
+
+    <div class="forum">
+        <div class="leftside">
+            <div class="forumcontainer">
+                <div class="forumheader">
+                    <h1>Active Forum Discussions</h1>
+                    <a href="#" class="createbutton">Create Post +</a>
+                </div>
+                
+                <div class="forumcontent" id="forumcontentid">
+                        
+                    <div class="posts">
+                        <h2 class="title">What is Picverse?</h2>
+                        <div class="postinfo">
+                            <span class="author"><img src="assets/account.png" alt="Profile"> Jane Doe</span>
+                            <span class="time">6/2/2025</span>
+                            <span class="repliescount">2 replies</span>
+                        </div>
+                        <div class="replies"></div>
+                    </div>
+                    <div class="posts">
+                        <h2 class="title">Who made Picverse?</h2>
+                        <div class="postinfo">
+                            <span class="author"><img src="assets/account.png" alt="Profile"> Jane Doe</span>
+                            <span class="time">6/2/2025</span>
+                            <span class="repliescount"> </span>
+                        </div>
+                        <div class="replies"></div>
+                    </div>
+                    <div class="posts">
+                        <h2 class="title">Why did they make Picverse?</h2>
+                        <div class="postinfo">
+                            <span class="author"><img src="assets/account.png" alt="Profile"> Jane Doe</span>
+                            <span class="time">6/2/2025</span>
+                            <span class="repliescount"> </span>
+                        </div>
+                        <div class="replies"></div>
+                    </div>
+                    <div class="posts">
+                        <h2 class="title">What inspired Picverse?</h2>
+                        <div class="postinfo">
+                            <span class="author"><img src="assets/account.png" alt="Profile"> Jane Doe</span>
+                            <span class="time">6/2/2025</span>
+                            <span class="repliescount"> </span>
+                        </div>
+                        <div class="replies"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="rightside">
+            <div class="recent" >
+                <div class="recentheader">
+                    <h3>Recent Activity</h3>
+                </div>
+                
+                <div class="recentActivity">
+                    <div class="posts">
+                        <h2 class="action">He jumped off a bridge</h2>
+                        <div class="postinfo">
+                            
+                            <span class="when">11 minutes ago</span>
+                        </div>
+                    </div>
+                    <div class="posts">
+                        <h2 class="action">New post by </h2>
+                        <div class="postinfo">
+                            
+                            <span class="when">25 minutes ago</span>
+                        </div>
+                    </div>
+                    <div class="posts">
+                        <h2 class="action">Someone just commented on your post about "What is Picverse?"</h2>
+                        <div class="postinfo">
+                            
+                            <span class="when">37 minutes ago</span>
+                        </div>
+                    </div>
+                    <div class="posts">
+                        <h2 class="action">Someone unfollowed you</h2>
+                        <div class="postinfo">
+                            
+                            <span class="when">1 hour ago</span>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            
+
+            <div class="activeuser">
+                <h3>Active Users</h3>
+                <div class="userlist">
+                    <div class="users">
+                        <img id="pfp" src="" alt="pfp">
+                        <h2 class="name">Wilson</h2>
+                    </div>
+                    <div class="users">
+                        <img id="pfp" src="" alt="pfp">
+                        <h2 class="name">Wilson</h2>
+                    </div>
+                    <div class="users">
+                        <img id="pfp" src="" alt="pfp">
+                        <h2 class="name">Wilson</h2>
+                    </div>
+                    <div class="users">
+                        <img id="pfp" src="" alt="pfp">
+                        <h2 class="name">Wilson</h2>
+                    </div>
+                    <div class="users">
+                        <img id="pfp" src="" alt="pfp">
+                        <h2 class="name">Wilson</h2>
+                    </div>
+                    <div class="users">
+                        <img id="pfp" src="" alt="pfp">
+                        <h2 class="name">Wilson</h2>
+                    </div>
+                    <div class="users">
+                        <img id="pfp" src="" alt="pfp">
+                        <h2 class="name">Wilson</h2>
+                    </div>
+                    <div class="users">
+                        <img id="pfp" src="" alt="pfp">
+                        <h2 class="name">Wilson</h2>
+                    </div>
+                    <div class="users">
+                        <img id="pfp" src="" alt="pfp">
+                        <h2 class="name">Wilson</h2>
+                    </div>
+                    <div class="users">
+                        <img id="pfp" src="" alt="pfp">
+                        <h2 class="name">Wilson</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+
+
+    </div>
+
+    <script src="community.js" defer></script>
+
+    <div class="modal">
+        <div class="create">
+            <h1>Create New Post</h1>
+            <span class="close-button">&times;</span>
             <div class="createnewpost">
                 <input type="text" id="titlepost" placeholder="Title of the Post">
                 <input type="text" id="poster" placeholder="Your Name">
                 <textarea name="" id="descpost" placeholder="Description..."></textarea>
                 <button id="submitpost">Submit Post</button>
             </div>
-
-            <h1>Active Forum Discussions</h1>
-            <div class="forumcontent" id="forumcontentid">
-                
-                <div class="posts">
-                    <h2 class="title">What is Picverse?</h2>
-                    <div class="postinfo">
-                        <span class="author"><img src="assets/account.png" alt="Profile"> Jane Doe</span>
-                        <span class="time">6/2/2025</span>
-                        <span class="repliescount">5 replies</span>
-                    </div>
-                </div>
-                <div class="posts">
-                    <h2 class="title">Who made Picverse?</h2>
-                    <div class="postinfo">
-                        <span class="author"><img src="assets/account.png" alt="Profile"> Jane Doe</span>
-                        <span class="time">6/2/2025</span>
-                        <span class="repliescount">3 replies</span>
-                    </div>
-                </div>
-                <div class="posts">
-                    <h2 class="title">Why did they make Picverse?</h2>
-                    <div class="postinfo">
-                        <span class="author"><img src="assets/account.png" alt="Profile"> Jane Doe</span>
-                        <span class="time">6/2/2025</span>
-                        <span class="repliescount">6 replies</span>
-                    </div>
-                </div>
-                <div class="posts">
-                    <h2 class="title">What inspired Picverse?</h2>
-                    <div class="postinfo">
-                        <span class="author"><img src="assets/account.png" alt="Profile"> Jane Doe</span>
-                        <span class="time">6/2/2025</span>
-                        <span class="repliescount">7 replies</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="recent" >
-                
-                <h3>Recent Activity</h3>
-                <div class="recentActivity">
-
-
-                </div>
-            </div> 
-            
-            <div class="activeuser">
-
-            </div>
-
         </div>
-
     </div>
-
-    <script src="community.js" defer></script>
-
-
+    
+    
+    <script src="nav.js" defer></script>
 </body>
 </html>

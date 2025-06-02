@@ -20,9 +20,9 @@ function submitpost(){
         author,
         date,
         replies:[
-            "Sure, what specifically?",
+            "You've come to the right place",
             "I can help",
-            "Try seach online."
+            "Try to search online."
         ]
     };
 
@@ -85,3 +85,42 @@ function create({title, desc, author, date, replies}) {
 //   `;
 //   recentContainer.appendChild(post);
 // });
+
+const builtinreplies = [
+    "i dont know man",
+    "idk man"
+];
+
+const static = document.querySelector('.posts:nth-child(1)');
+const repliesSection = static.querySelector('.replies');
+const repliesCount= static.querySelector('.repliescount');
+repliesCount.textContent = `${builtinreplies.length} replies`;
+
+static.addEventListener("click", () =>{
+    if(repliesSection.style.display ==='none' || repliesSection.style.display === ''){
+            repliesSection.style.display='block';
+            repliesSection.innerHTML = builtinreplies.map(reply => `<div>- ${reply}</div>`).join('');
+        } else {
+            repliesSection.style.display='none';
+        }
+})
+
+document.querySelector('.createbutton').addEventListener('click', function(e) {
+    e.preventDefault(); 
+    document.querySelector('.modal').style.display = 'flex';
+});
+
+document.querySelector('.close-button').addEventListener('click', function() {
+    document.querySelector('.modal').style.display = 'none';
+});
+
+window.addEventListener('click', function(e) {
+    const modal = document.getElementById('.modal');
+    if (e.target === modal) {
+        modal.style.display = 'none';
+    }
+});
+
+document.querySelector('#submitpost').addEventListener('click', function() {
+    document.querySelector('.modal').style.display = 'none';
+});

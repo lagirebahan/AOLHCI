@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="textfont.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="submit.css">
+    <link rel="stylesheet" href="nav.css">
+
 </head>
 <body>
     <header>
@@ -18,36 +20,65 @@
                  </a>
             </div>
             
+            <button id="hamburger">&#9776;</button>
 
-            <div class="linkclass">
+            <div class="linkclass" id="navlink">
                 <a href="about.html"><h3>About Us</h3></a>
                 <a href="gallery.html"><h3>Gallery</h3></a>
                 <a href="community.html"><h3>Community</h3></a>
                 <a href="submit.html"><h3>Submit</h3></a>
-                <!-- <button id="search" ><img src="assets/search.png" alt="search"></button> -->
             </div>
         </nav>
     </header>
 
     <div class="submission">
-        <center>
-            <h1>Submit Work</h1>
-            <h2>Description</h2>  
-        </center>
+        <div class="submissionheader">
+            <center>
+            <h1>Submit Your Work</h1>
+            <br> 
+            </center>
+        </div>
+        
             
         <div class="submissionoverlay">
             <div class="submitwork">
-                <input type="text" id="email" placeholder="email@email.com">
-                <input type="text" id="titlepost" placeholder="Title of the Post">
-                <input type="text" id="poster" placeholder="Your Name">
-                <textarea name="" id="descpost" placeholder="Description..."></textarea>
-                <input type="text" id="posttags">
-                <button id="submitpost">Submit Work</button>
+                <form id="submissionform">
+                    <div class="fileupload">
+                        <input type="file" id="file">
+                        <label for="file">Upload File</label>
+                        <div class="error" id="fileerror"></div>
+                    </div>
+                    <div class="rightside">
+                        <input type="text" id="email" placeholder="email@email.com">
+                        <div class="error" id="emailerror"></div>
+                        <input type="text" id="titlepost" placeholder="Title of the Post">
+                        <div class="error" id="titleerror"></div>
+                        <input type="text" id="poster" placeholder="Your Name">
+                        <div class="error" id="postererror"></div>
+                        <textarea id="descpost" placeholder="Description..."></textarea>
+                        <div class="error" id="descerror"></div>
+                        <input type="text" id="posttags" placeholder="Choose related tags">
+                        <div class="error" id="tagserror"></div>
+                        <div class="aichecker">
+                            <p>Is this AI?</p>
+                            <label><input type="radio" name="aigen" value="yes">Yes</label>
+                            <label><input type="radio" name="aigen" value="no">No</label>
+                            <div class="error" id="radioerror"></div>
+                        </div>
+                        
+                        <button type="submit" id="submitpost">Submit Work</button>
+                    </div>  
+                </form>
+                
+                
             </div>
         </div>
             
 
     </div>
 
+    <script src="nav.js" defer></script>
+    <script src="submit.js" defer></script>
+    
 </body>
 </html>

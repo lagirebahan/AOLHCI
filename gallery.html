@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="card.css">
     <link rel="stylesheet" href="gallery.css">
+    <link rel="stylesheet" href="nav.css">
+
 </head>
 <body>
     <header>
@@ -19,19 +21,23 @@
                  </a>
             </div>
             
+            <button id="hamburger">&#9776;</button>
 
-            <div class="linkclass">
+            <div class="linkclass" id="navlink">
                 <a href="about.html"><h3>About Us</h3></a>
                 <a href="gallery.html"><h3>Gallery</h3></a>
                 <a href="community.html"><h3>Community</h3></a>
                 <a href="submit.html"><h3>Submit</h3></a>
-                <!-- <button id="search" ><img src="assets/search.png" alt="search"></button> maybe move search under hero-->
             </div>
         </nav>
     </header>
 
-    <div class="trendingcontainer">
-        <div class="trending">
+    <div class="toplayer">
+        <h1>Gallery Page</h1>
+    </div>
+
+    <div class="tagcontainer">
+        <div class="tags">
             <h1>Portrait</h1>
             <div class="tag" id="portrait">
                 <div class="artcard">
@@ -39,7 +45,9 @@
                     <div class="artinfo">
                         <p class="artname">art name</p>
                         <p class="artist">artist</p>
-                        <div class="like"><img src="assets/heart.png" alt="Like" class="hearticon"><span class="likecount">134</span></div>
+                        <div class="like">
+                            <img src="assets/heart.png" alt="Like" class="hearticon">
+                            <span class="likecount">134</span></div>
                     </div>
                 </div>
                 <div class="artcard">
@@ -63,7 +71,8 @@
                     <div class="artinfo">
                         <p class="artname">art name</p>
                         <p class="artist">artist</p>
-                        <div class="like"><img src="assets/heart.png" alt="Like" class="hearticon"><span class="likecount">134</span></div>
+                        <div class="like"><img src="assets/heart.png" alt="Like" class="hearticon">
+                            <span class="likecount">134</span></div>
                     </div>
                 </div>
                 <div class="artcard">
@@ -295,11 +304,7 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
 
-    <div class="normalcontainer">
-        <div class="normal">
             <h1>Abstract</h1>
             <div class="tag" id="abstract">
                 <div class="artcard">
@@ -714,5 +719,6 @@
         </div>
     </div>
     <script src="card.js" defer></script>
+    <script src="nav.js" defer></script>
 </body>
 </html>

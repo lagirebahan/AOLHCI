@@ -27,17 +27,28 @@ artcards.forEach(card =>{
 
         popupheart.src = liked ? "assets/heart (1).png" : "assets/heart.png";
 
-        // if(liked){
-        //     popupheart.src = "assets/heart (1).png";
-        // } else {
-        //     popupheart.src= "assets/heart.png";
-        // }
-
         popupcount.textContent = cardcount.textContent;
 
 
         popupOverlay.style.display='flex';
 
+
+        popupheart.onclick = function (e) {
+            e.stopPropagation();
+            if (!cardlike || !cardcount) return;
+
+            const isLiked = popupheart.src.includes("heart (1).png");
+            if (isLiked) {
+                popupheart.src = "assets/heart.png";
+                cardlike.src = "assets/heart.png";
+                cardcount.textContent = Math.max(0, parseInt(cardcount.textContent) - 1);
+            } else {
+                popupheart.src = "assets/heart (1).png";
+                cardlike.src = "assets/heart (1).png";
+                cardcount.textContent = parseInt(cardcount.textContent) + 1;
+            }
+            popupcount.textContent = cardcount.textContent;
+        };
     });
 });
 
@@ -51,31 +62,7 @@ popupOverlay.addEventListener('click', function(e){
     }
 });
 
-// popupheart.addEventListener("click", (event) =>{
-//     event.stopPropagation();
-//     if(!current) return;
-
-//     const cardlike= current.querySelector('.hearticon');
-//     const cardcount= current.querySelector('.likecount');
-//     let count = parseInt(cardcount.textContent,10)||0;
-//     let liked=popupheart.src.includes("heart (1).png");
-
-//     if(liked){
-//         popupheart.src = "assets/heart.png";
-//         cardlike.src = "assets/heart.png";
-//         count--;
-//     } else {
-//         popupheart.src = "assets/heart (1).png";
-//         cardlike.src = "assets/heart (1).png";
-//         count++;
-//     }
-//     popupcount.textContent=count;
-//     cardcount.textContent=count;
-// });
-
-const hearticon = document.querySelectorAll(".hearticon");
-
-hearticon.forEach(x => {
+document.querySelectorAll(".hearticon").forEach(x => {
     let liked = false;
 
     const likecount = x.parentElement.querySelector(".likecount");

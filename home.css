@@ -239,26 +239,7 @@ body{
     pointer-events: none;
 }
 
-@media only screen and (max-width: 768px) {
-  .hero {
-    flex-direction: column;
-    padding: 0;
-    height: auto;
-  }
 
-  .hero h1 {
-    font-size: 2rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
-  }
-
-  .btn {
-    padding: 0.6rem 1.2rem;
-    font-size: 0.9rem;
-  }
-}
 
 
 /*Featured artworks and tags section*/
@@ -477,16 +458,152 @@ body{
     background: gray;
     transform: scale(1.05);
 }
+@media only screen and (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    padding: 0;
+    
+  }
+  .hero,
+  .slider,
+  .slider img,
+  .pengelapdunia {
+    height: 300px;
+  }
+
+  .slider-wrapper {
+    overflow-x: hidden;
+  }
+
+  .herocontent {
+    width: 90%;
+    padding: 15px;
+    border-radius: 20px;
+    margin: 0 auto;
+  }
+
+  .herocontent h1 {
+    font-size: 28px;
+  }
+
+  .herocontent h2 {
+    font-size: 26px;
+  }
+
+  .herocontent h2 span {
+    font-size: 22px;
+  }
+
+  .herocontent h3 {
+    font-size: 22px;
+  }
+
+  .herocontent h3 span {
+    font-size: 30px;
+  }
+
+  .herocontent h4 {
+    font-size: 14px;
+  }
+
+  .herocontent h4 span {
+    font-size: 16px;
+  }
+
+  .herocontent button {
+    width: 100px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .slider-nav {
+    bottom: 0.5rem;
+    column-gap: 0.5rem;
+  }
+
+  .slider-nav a,
+  .slider-nav .left-slide,
+  .slider-nav .right-slide {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .slider-nav img {
+    width: 0.75rem;
+    height: 0.75rem;
+  }
+}
 
 @media only screen and (max-width:600px){
-    .layer2 {
-        flex-direction: column;
-    }
-    .rightside {
-        width: 100%;
-        margin-top: 20px;
-    }
-    .featured-artwork{
-        width: 100%;
-    }
+    .mainsection {
+    padding: 10px;
+    gap: 20px;
+  }
+
+  .layer1,
+  .layer2 {
+    flex-direction: column;
+    padding: 10px;
+    gap: 20px;
+  }
+
+  .featured-artwork{
+    margin: 0 auto;
+    padding: 50px;
+    justify-content: center;
+  }
+
+  .featured-header{
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .trending-tags h1,
+  .featured-artwork h1,
+  .rightside h1 {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .trending {
+    justify-content: center;
+  }
+
+  .searchbar {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .searchInput {
+    font-size: 12px;
+  }
+
+  .artflex {
+    grid-template-columns: repeat(1, 1fr); 
+  }
+
+  .tagflex {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .rightside {
+    width: 100%;
+  }
+
+  .rightside h1 {
+    width: 100%;
+  }
+
+  .see-more {
+    font-size: 18px;
+    text-align: center;
+    display: block;
+    margin-top: 10px;
+  }
+
+  .galleryredirect {
+    width: 100%;
+    text-align: center;
+  }
 }

@@ -29,6 +29,9 @@ body{
     width: 100%;
     margin-top: 10px;
     scroll-margin-top: 40vh;
+    background-color: #3c3b3f;
+    padding: 40px;
+    border-radius: 20px;
 }
 
 body h1{
@@ -56,4 +59,46 @@ body h1{
     font-size: 90px;
     font-weight:400;
     color: #FFDD95;
+}
+
+@media only screen and (max-width: 768px) {
+    .tagcontainer {
+        flex-direction: column;
+        padding: 15px;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .tags {
+        width: 100%;
+        padding: 10px;
+        gap: 20px;
+    }
+
+    .tag {
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 20px;
+    
+    }
+
+    body h1 {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .toplayer {
+        height: 180px;
+        padding: 10px;
+        justify-content: center;
+    }
+
+    .toplayer h1 {
+        font-size: 40px;
+        text-align: center;
+        padding: 0 10px;
+    }
 }

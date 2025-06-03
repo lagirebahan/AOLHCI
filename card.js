@@ -20,14 +20,12 @@ artcards.forEach(card =>{
 
         const cardlike= card.querySelector('.hearticon');
         const cardcount= card.querySelector('.likecount');
-
-        const liked = cardlike.src.includes("heart (1).png");
         
         popupimg.src=imgsrc;
         popuptitle.textContent= title;
         popupartist.textContent=artist;
 
-        popupheart.src = liked ? "assets/heart (1).png" : "assets/heart.png";
+        popupheart.src = cardlike.src;
 
         popupcount.textContent = cardcount.textContent;
 
@@ -43,18 +41,17 @@ popupheart.addEventListener('click', (e) => {
     const cardlike = currentcard.querySelector('.hearticon');
     const cardcount = currentcard.querySelector('.likecount');
 
-    const isLiked = popupheart.src.includes("heart (1).png");
+    const isLiked = popupheart.src.includes("heart1.png");
     
     if (isLiked) {
-        cardlike.src = "assets/heart.png";
         cardcount.textContent = Math.max(0, parseInt(cardcount.textContent) - 1);
-        popupheart.src = "assets/heart.png";
     } else {
-        
-        cardlike.src = "assets/heart (1).png";
         cardcount.textContent = parseInt(cardcount.textContent) + 1;
-        popupheart.src = "assets/heart (1).png";
     }
+
+    const newsrc= isLiked ? "assets/heart.png" : "assets/heart1.png";
+    popupheart.src = newsrc;
+    cardlike.src= newsrc;
     popupcount.textContent = cardcount.textContent;
 });
 
@@ -72,7 +69,7 @@ popupOverlay.addEventListener('click', function(e){
 
 
 document.querySelectorAll(".hearticon").forEach(x => {
-    let liked = x.src.includes("heart (1).png");
+    let liked = x.src.includes("heart1.png");
 
     const likecount = x.parentElement.querySelector(".likecount");
     let count = parseInt(likecount.textContent, 10)||0;
@@ -81,7 +78,7 @@ document.querySelectorAll(".hearticon").forEach(x => {
         event.stopPropagation();
         liked = !liked;
         if(liked){
-            x.src="assets/heart (1).png";
+            x.src="assets/heart1.png";
             count++;
         } else {
             x.src="assets/heart.png";

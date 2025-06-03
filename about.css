@@ -7,11 +7,32 @@ body{
 
 }
 
+.toplayer {
+    width: 100%;
+    height: 300px;
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(assets/8dBYIP.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+}
+
+.toplayer h1{
+    font-family: 'Bebas Neue', sans-serif;
+    font-style: normal;
+    font-size: 90px;
+    font-weight:400;
+    color: #FFDD95;
+}
+
 .aboutus{
-    min-width: 1200px;
+    width: 100%;
     margin: 2rem auto;
     padding: 0 1rem;
-
+    box-sizing: border-box;
 }
 
 .aboutus h1{
@@ -29,58 +50,118 @@ body{
 
 .visionmission{
     margin-bottom: 2rem;
-    padding: 1.5rem;
-    background-color: #f8f9fa;
-    border-radius: 8px;
+    padding: 30px;
+    background-color: white;
+    border-radius: 16px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.mainfeatures{
-    padding: 1.5rem;
-    background-color: #f8f9fa;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.mainfeatures h2{
-    color: #333;
-    margin-bottom: 1.5rem;
-    font-size: 1.5rem;
-}
-
-.feature{
-    margin-bottom: 1.5rem;
-}
-.feature h3{
-    color:#444;
-    margin-bottom: 0.5rem;
-    font-size: 1.2rem;
-}
-.feature p{
-    line-height: 1.6;
-    color: #555;
+    text-align: center;
 }
 .visionmission h2{
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
     color: #333;
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
+    margin-bottom: 10px;
 }
 
 .visionmission p{
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
     line-height: 1.6;
     color: #555;
+    margin-bottom: 10px;
+}
+.mainfeatures {
+    padding: 2rem;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    max-width: 900px;
+    margin: 2rem auto;
+    transition: all 0.3s ease;
 }
 
+.mainfeatures h2 {
+    color: #222;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 1px;
+}
+
+.feature {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    border-radius: 12px;
+    background-color: white;
+    transition: transform 0.2s ease;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+    background-color: #f0f0f0;
+}
+
+.feature h3 {
+    color: #333;
+    margin-bottom: 0.75rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.feature p {
+    line-height: 1.8;
+    color: #555;
+    font-size: 1rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+
+
 @media (max-width: 768px) {
-    .about-grid {
+    .toplayer{
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+        padding: 2rem;
+    }
+    .toplayer h1{
+        font-size: 2.5rem;
+    }
+    .aboutus{
+        min-width: none;
+        width: 100%;
+    }
+    .aboutlayout{
         grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
-    
-    .about-container {
-        margin: 1rem;
+    .visionmission{
+        padding: 1.5rem;
     }
-    
-    .about-section, .features-section {
-        padding: 1rem;
+    .visionmission h2{
+        font-size: 1.8rem;
+    }
+    .visionmission p{
+        font-size: 0.9rem;
+    }
+    .mainfeatures {
+        padding: 1.5rem;
+    }
+
+    .mainfeatures h2 {
+        font-size: 1.6rem;
+    }
+
+    .feature h3 {
+        font-size: 1.2rem;
+    }
+
+    .feature p {
+        font-size: 0.95rem;
     }
 }

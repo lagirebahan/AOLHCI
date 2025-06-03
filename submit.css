@@ -26,9 +26,12 @@ body{
     padding: 10px 10px 10px 30px;
     align-items: center;
     justify-content: center;
+    text-align: center;
 }
 
 .submission h1{
+    font-family: 'Inter', sans-serif;
+    font-size: 35px;
     margin-top: 0;
     text-align: center;
 }
@@ -38,7 +41,7 @@ body{
     flex-direction: row;
     gap: 2rem;
     margin-bottom: 2rem;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
 }
@@ -51,14 +54,14 @@ body{
     min-width: 250px;
 }
 
-.submitwork input{
+.rightside input{
     padding: 0.5rem;
     font-size: 1rem;
     border-radius: 5px;
     border: 1px solid #ccc;
 }
 
-.submitwork textarea{
+.rightside textarea{
     padding: 0.5rem;
     font-size: 1rem;
     border-radius: 5px;
@@ -87,6 +90,13 @@ body{
     display: none;
 }
 
+/* .fileupload .error{
+    margin-top: 8px;
+    color: red;
+    font-size: 14px;
+    text-align: center;
+} */
+
 .fileupload label{
     display: flex;
     align-items: center;
@@ -104,9 +114,33 @@ body{
     border: 1px dashed red;
 }
 
+.aichecker{
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.aichecker p {
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 14px;
+}
+
+.aichecker label{
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 14px;
+}
+
+.error{
+    font-family: 'Playfair Display', sans-serif;
+    color: red;
+    font-size: 14px;
+    display: none;
+}
+
 @media only screen and (max-width: 768px) {
     .submitwork {
         flex-direction: column;
+        padding: 1rem;
         align-items: center;
     }
 
@@ -114,6 +148,9 @@ body{
     .rightside {
         width: 100%;
         max-width: 400px;
+    }
+    .fileupload label{
+        font-size: 0.9rem;
     }
 
     #submissionform {

@@ -28,7 +28,7 @@ const buttons = document.querySelectorAll('.slider-nav a.slide-button');
 const leftbutton = document.querySelector('.left-slide');
 const rightbutton = document.querySelector('.right-slide');
 
-const artistName = ['artist1','artist2','artist3'];
+const artistName = ['John Doe','Juhn Doe','Jihn Doe'];
 const artistNameElement = document.getElementById('artistname');
 
 

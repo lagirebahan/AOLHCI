@@ -89,6 +89,7 @@ body{
 }
 
 .forum h1{
+    font-family: 'Inter', sans-serif;
     margin-top: 0;
 }
 .replies{
@@ -130,9 +131,10 @@ body{
 }
 
 .postinfo{
+    font-family: 'Playfair Display', sans-serif;
     margin-top: 0.5rem;
     color: #777;
-    font-size:0.9rem;
+    font-size:0.8rem;
     display: flex;
     gap: 1.5rem;
 }
@@ -158,8 +160,9 @@ body{
 }
 
 .recent h3{
+    font-family: 'Inter', sans-serif;
     margin-bottom: 1rem;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     color: #333;
 }
 
@@ -183,8 +186,9 @@ body{
 }
 
 .activeuser h3{
+    font-family: 'Inter', sans-serif;
     margin-bottom: 1rem;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     color:#333;
 }
 
@@ -197,10 +201,12 @@ body{
 
 .users {
     display: flex;
+    width: 150px;
+    height: 100px;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    background-color: #777;
+    background-color: #d9d9d9;
     padding: 10px 40px;
     border-radius: 8px;
 }
@@ -214,7 +220,8 @@ body{
 }
 
 .users .name{
-    font-size: 0.75rem;
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 14px;
     margin-top: 0.3rem;
 }
 

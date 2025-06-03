@@ -1,15 +1,86 @@
 body{
     overflow-x: hidden;
-    /* background-color: #FFF3C4; 
-    background-color: #D8ECF3; 
-    background-color: #D0F0C0; 
-    background-color: #EADCF8; 
-    background-color: #F0FFF0; */
-    /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-    url(assets/Untitled\ design\ \(1\).png); */
     background: linear-gradient(90deg, #2c3e50, #4b3869, #1e3c72, #2f4f4f, #3c3b3f);
     background-repeat: repeat-y;
     background-size: auto;
     background-position: top center;
 
+}
+
+.aboutus{
+    min-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+
+}
+
+.aboutus h1{
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    
+}
+
+.aboutlayout{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.visionmission{
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.mainfeatures{
+    padding: 1.5rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.mainfeatures h2{
+    color: #333;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.feature{
+    margin-bottom: 1.5rem;
+}
+.feature h3{
+    color:#444;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+.feature p{
+    line-height: 1.6;
+    color: #555;
+}
+.visionmission h2{
+    color: #333;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.visionmission p{
+    line-height: 1.6;
+    color: #555;
+}
+
+@media (max-width: 768px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .about-container {
+        margin: 1rem;
+    }
+    
+    .about-section, .features-section {
+        padding: 1rem;
+    }
 }

@@ -4,7 +4,6 @@ const popupimg= document.getElementById('popupimg');
 const popuptitle= document.getElementById('popupname');
 const popupartist= document.getElementById('popupartist');
 const closebtn= document.querySelector('.close-btn');
-
 const popupheart= document.getElementById('popuphearticon');
 const popupcount=document.getElementById('popuplikecount');
 
@@ -12,7 +11,7 @@ let currentcard=null;
 
 artcards.forEach(card =>{
     card.addEventListener('click', function(){
-        currentcard=card;
+        currentcard = card;
 
         const imgElem = card.querySelector('.artimage img');
         const imgsrc = imgElem ? imgElem.src : '';
@@ -44,15 +43,17 @@ popupheart.addEventListener('click', (e) => {
     const cardlike = currentcard.querySelector('.hearticon');
     const cardcount = currentcard.querySelector('.likecount');
 
-    let isLiked = popupheart.src.includes("heart (1).png");
+    const isLiked = popupheart.src.includes("heart (1).png");
+    
     if (isLiked) {
-        popupheart.src = "assets/heart.png";
         cardlike.src = "assets/heart.png";
         cardcount.textContent = Math.max(0, parseInt(cardcount.textContent) - 1);
+        popupheart.src = "assets/heart.png";
     } else {
-        popupheart.src = "assets/heart (1).png";
+        
         cardlike.src = "assets/heart (1).png";
         cardcount.textContent = parseInt(cardcount.textContent) + 1;
+        popupheart.src = "assets/heart (1).png";
     }
     popupcount.textContent = cardcount.textContent;
 });
@@ -68,6 +69,7 @@ popupOverlay.addEventListener('click', function(e){
         currentcard=null;
     }
 });
+
 
 document.querySelectorAll(".hearticon").forEach(x => {
     let liked = x.src.includes("heart (1).png");
